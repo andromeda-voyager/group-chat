@@ -1,0 +1,23 @@
+<div id="component">
+  <div id="chat-container" *ngIf="nameSubmitted">
+    <div id="chat-box">
+      <div class="message" [ngClass]="{'left': message.isIncomming,'right': !message.isIncomming}"
+        *ngFor="let message of messages; let i = index">
+        <span class="sender">{{message.sender}} </span>
+      <span class="text">{{message.text}}</span>
+      </div>
+    </div>
+    <input (keyup.enter)="sendText()"  [(ngModel)]="inputText" id="text-input">
+  </div>
+
+  <div *ngIf="!nameSubmitted" class="card">
+    <mat-form-field color="primary" appearance="outline">
+      <mat-label>Your Name</mat-label>
+      <input matInput  [(ngModel)]="userName">
+      <mat-hint class="hint" *ngIf="isInvalidName && userName.length < 1">Required</mat-hint>
+    </mat-form-field>
+    <button mat-button class="submit" (click)=submitName()>Submit</button>
+  </div>
+</div>
+
+<!-- #scroll [scrollTop]="scroll.scrollHeight" -->

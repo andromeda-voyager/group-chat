@@ -1,0 +1,118 @@
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+#component {
+    margin:auto;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    background-color: rgb(71, 71, 71);
+}
+
+#chat-container {
+    margin:auto;
+    height:90%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:90%;
+    max-width: 800px;
+}
+
+#chat-box {
+    overflow-y:scroll;
+    display:flex;
+    flex-direction: column;
+    height:90%;
+    width:100%;
+    min-height:150px;
+    border-radius: 6px;
+    border: 3px solid  rgb(47, 48, 49);
+    background-color:  rgb(47, 48, 49);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.356);
+    scrollbar-width: none;
+}
+
+#chat-box::-webkit-scrollbar {
+    display: none;
+}
+
+#text-input {
+    width:100%;
+    height:5%;
+    min-height:30px;
+    font-size: 18px;
+    border-radius: 1px;
+    margin-top:2%;
+    color:white;
+    border: 3px solid  rgb(62, 64, 68);
+    background-color: rgb(62, 64, 68);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.356);
+}
+
+.message {
+    display:flex;
+    flex-direction: column;
+    margin-top:15px;
+    width: fit-content;
+    max-width:50%;
+    word-wrap: break-word;
+    font-size: max(1vw, 15px);
+}
+
+.text {
+    border-radius: 5px;
+    padding:10px;
+    box-shadow: 0 5px 5px rgba(4, 57, 138, 0.35);
+}
+
+.left .sender {
+    color:rgb(32, 156, 94);
+}
+
+.right .sender {
+    text-align:end;
+    color:rgb(32, 147, 255);
+}
+
+.left .text {
+    background-color: rgb(32, 156, 94);
+}
+
+.right .text {
+    background-color: rgb(32, 147, 255);
+}
+
+.right {
+    align-self: flex-end;
+    margin-right:2%;
+}
+
+.left {
+    margin-left:2%;
+}
+
+.submit {
+    background-color: rgb(26, 111, 190);
+    color:white;
+    padding:5px 20px 5px 20px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.356);
+  }
+  
+.submit:hover {
+    opacity: .8;
+}
+
+.hint {
+    color:red;
+}
+
+.card {
+    margin:auto;
+    padding:30px;
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+  }
